@@ -1,0 +1,114 @@
+.movie-details {
+  height: 100%;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.932);
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header   header   header"
+    "poster   overview overview"
+    "poster   cast     cast"
+    ".        .        ."
+    "trailers trailers trailers";
+  gap: 1.5rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header {
+    grid-area: header;
+    width: 100%;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 4rem auto;
+
+    .go-back {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      justify-self: center;
+
+      .year {
+        color: #ccc;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .poster {
+    grid-area: poster;
+    width: inherit;
+    min-width: 15rem;
+    max-width: 25rem;
+    height: auto;
+  }
+
+  .movie-overview {
+    grid-area: overview;
+  }
+  .cast-list-container {
+    grid-area: cast;
+  }
+
+  .trailer-list-container {
+    grid-area: trailers;
+  }
+
+  @media screen and (max-width: 1250px) {
+    grid-template-areas:
+      "header   header   header"
+      "poster   overview overview"
+      "cast   cast     cast"
+      ".        .        ."
+      "trailers trailers trailers";
+
+    .cast-list-container {
+      .title {
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+  }
+  /*Mobil eller mindre plattor*/
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+
+    .poster {
+      min-width: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    grid-template-areas:
+      "header   header   header"
+      "overview overview overview"
+      "cast     cast     cast"
+      ".        .        ."
+      "trailers trailers trailers";
+
+    .header {
+      .title {
+        font-size: 1.8rem;
+      }
+    }
+
+    .poster {
+      display: none;
+    }
+  }
+}

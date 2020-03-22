@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+* {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+
+  background: #0f0a3c; /* fallback for old browsers */
+  background: radial-gradient(100% 225% at 100% 0%, #ff0000 0%, #000000 100%),
+    linear-gradient(236deg, #00c2ff 0%, #000000 100%),
+    linear-gradient(
+      135deg,
+      #cdffeb 0%,
+      #cdffeb 36%,
+      #009f9d 36%,
+      #009f9d 60%,
+      #07456f 60%,
+      #07456f 67%,
+      #0f0a3c 67%,
+      #0f0a3c 100%
+    );
+  background-blend-mode: overlay, hard-light, normal;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* Big screen */
+
+@media screen and (min-width: 1500px) {
+  .mainContentContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Ipad */
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 320px) {
+}

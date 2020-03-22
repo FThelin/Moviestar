@@ -1,0 +1,37 @@
+.headerContainer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hamburgerMenu {
+  background-color: #e0e0e08e;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.hamburgerMenu:hover {
+  background-color: #e0e0e0e3
+}
+
+@media screen and (min-width: 769px) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
